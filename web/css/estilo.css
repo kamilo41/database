@@ -1,0 +1,64 @@
+body{
+    background-color: cadetblue; 
+}
+
+h1{
+    text-align:center;
+}
+
+label{
+    display: inline-block;
+    width: 180px;
+    color: red;
+    margin: 8px;
+}
+
+#lb1,#lb2{
+    display: inline;
+}
+
+input,select{
+    width: 200px;
+    margin: 3px;
+    text-align:center;
+}
+
+form{
+    display: block;
+    width: 900px;
+    border: 2px black solid;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    text-align:center;
+}
+
+h2{
+    text-align:center;
+    background-color: black;
+    color: white;
+}
+
+h4{
+    text-align:center;
+    color: black;
+}
+#chkiv,#chkvc,#optcom1,#optcom2{
+    width: auto;
+  text-align:center;
+}
+
+#btncost{
+    border-radius: 20px;
+    background-color: steelblue;
+    color: white;
+      text-align: center;
+}
+
+table{
+    text-align:center;
+   
+    
+}
