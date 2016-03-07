@@ -20,25 +20,22 @@
        
          <form action="ControllerServlet" method="POST">
           <h1>INFORMATION PUC</h1>
-          <sql:setDataSource  
+           <sql:setDataSource  
             var="connection"
             driver="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost/accounnting"
-            user="root"  password="kamilo"
+            url="jdbc:mysql://localhost/contabilidad"
+            user="root"  password=""
             />
         <sql:query var="result" dataSource="${connection}">
-        SELECT number, name  FROM acount
+        SELECT  name  FROM accounts where number <= 9
         </sql:query>
         
-        <table border="1">
-            <c:forEach var="value" items="${result.rows}">
-            <tr>
-            <td>${value.number}</td>
-            <td>${value.name}</td> 
-            </tr>
-            </c:forEach>
-          </table>
-        --%>
+        <select name="tab">
+            
+        <c:forEach var="value" items="${result.rows}">
+      <option>${value.name}</option>
+             </c:forEach>
+        </select>
         <br><br>
          
      <input type="submit" value="SEND ACCOUNTS"/>

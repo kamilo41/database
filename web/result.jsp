@@ -18,8 +18,85 @@
      
     </head>
     <body>
-         <h1>INFORMATION PUC</h1>
+         <form action="ControllerServlet" method="POST"> 
         
+        <h1>INFORMATION PUC</h1>
+         
+          <sql:setDataSource  
+            var="connection"
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost/contabilidad"
+            user="root"  password=""
+            />
+        
+        <c:choose>
+            <c:when test="${scores.Data.values == 'Activo' }">
+               <sql:query var="result" dataSource="${connection}">
+               SELECT number,name FROM accounts where number like '1%'
+        </sql:query>
+        <table border="1">
+         <c:forEach var="value" items="${result.rows}">
+                          <tr>
+                                <td>${value.name}</td>
+                                <td>${value.number}</td>
+                          </tr>
+                    </table>
+
+                    
+                    
+                </c:forEach>
+            
+            
+            
+            </c:when>
+            <c:when test="">
+            
+            
+            </c:when>
+            <c:when test="">
+            
+            
+            
+            
+            </c:when>
+            <c:when test="">
+            
+            
+            
+            
+            </c:when>
+            
+            <c:when test="">
+            
+            
+            
+            
+            </c:when>
+            <c:when test="">
+            </c:when>
+            <c:when test="">
+            </c:when>
+            <c:when test="">
+            </c:when>
+            <c:when test="">
+            </c:when>
+            <c:otherwise>
+            </c:otherwise>
+        </c:choose>
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         </form>
     
          </body>
 </html>
