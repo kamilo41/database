@@ -29,66 +29,26 @@
             user="root"  password=""
             />
         
-        <c:choose>
-            <c:when test="${scores.Data.values == 'Activo' }">
                <sql:query var="result" dataSource="${connection}">
                SELECT number,name FROM accounts where number like '1%'
         </sql:query>
-        <table border="1">
-         <c:forEach var="value" items="${result.rows}">
+            <center>
+               <table border="4">
+            <c:forEach var="value" items="${result.rows}">
                           <tr>
                                 <td>${value.name}</td>
                                 <td>${value.number}</td>
                           </tr>
-                    </table>
-
                     
-                    
-                </c:forEach>
             
+             </c:forEach>
             
-            
-            </c:when>
-            <c:when test="">
-            
-            
-            </c:when>
-            <c:when test="">
-            
-            
-            
-            
-            </c:when>
-            <c:when test="">
-            
-            
-            
-            
-            </c:when>
-            
-            <c:when test="">
-            
-            
-            
-            
-            </c:when>
-            <c:when test="">
-            </c:when>
-            <c:when test="">
-            </c:when>
-            <c:when test="">
-            </c:when>
-            <c:when test="">
-            </c:when>
-            <c:otherwise>
-            </c:otherwise>
-        </c:choose>
+               </table>
 
-         
-         
-         
-         
-         
+              </center>      
+             
+            
+                    
          
          
          

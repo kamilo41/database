@@ -30,7 +30,7 @@
         SELECT  name  FROM accounts where number <= 9
         </sql:query>
         
-        <select name="tab">
+        <select name="values">
             
         <c:forEach var="value" items="${result.rows}">
       <option>${value.name}</option>
